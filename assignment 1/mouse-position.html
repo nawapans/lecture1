@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mouse Position - Javascript</title>
+        <link rel="stylesheet" href="http://youtube.local/assets/dcode.css">
+        <link rel="shortcut icon" href="http://youtube.local/assets/favicon.ico">
+    </head>
+
+    <body>
+        <h2>I want to use this for point attractor, still no idea!</h2>
+        <p>
+            X: <span id="x-value"></span>
+        </p>
+        <p>
+            Y: <span id="y-value"></span>
+        </p>
+        <script type="text/javascript">
+            window.addEventListener('mousemove', function (e) {
+            document.getElementById('x-value').textContent = e.x;
+            document.getElementById('y-value').textContent = e.y;
+            });
+        </script>
+
+        <div>
+            function(){
+            <var> mX, mY, distance,
+                $distance = $('#distance span'),
+                $element = $('#element');
+            </var>
+            <function>
+                function calculateDistance(elem, mouseX, mouseY){
+                    return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+            </function>
+
+            <script type="text/javascript">
+            window.addEventListener('mousemove', function (e) {
+                mX = e.pageX;
+                mY = e.pageY;
+                distance = calculateDistance($element, mX, mY);
+                $distance.text(distance);         
+            });
+            </script>
+            
+
+        </div>
+
+    </body>
+
+</html>
