@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Image grid</title>
+    <title>Assignment 1</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -65,7 +65,7 @@
 
     <script type="application/javascript">
         // get reference to html elements
-        const img = document.getElementById('earth.jpg')
+        const img = document.getElementById('image-grid_main-image')
 
         // listen to events related to the image
         img.addEventListener('mouseover', mouseOver, false)
@@ -73,12 +73,12 @@
 
         // define what happens when there is a mouse over event
         function mouseOver() {
-            document.getElementById('earthtext').style.display = 'block';
+            document.getElementById('image-grid_content').style.display = 'block';
         }
 
         // define what happens when there is a mouse out event
         function mouseOut() {
-            document.getElementById('earthtext').style.display = 'none';
+            document.getElementById('image-grid_content').style.display = 'none';
         }
     </script>
 
